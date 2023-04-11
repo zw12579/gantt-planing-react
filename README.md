@@ -18,10 +18,10 @@
 	</a>
 </p>
 <p align="center">
-	<a href="https://gantt.bimcc.net/" target="_blank">在线演示环境</a> &nbsp;|
-	<a href="https://gantt.bimcc.net/"  target="_blank">安装指导</a>&nbsp;|
-    <a href="https://gantt.bimcc.net/"  target="_blank">说明文档</a> |
-    <a href="https://gantt.bimcc.net/"  target="_blank">更新日志</a>
+	<a href="https://gantt.bimcc.net/" target="_blank">在线演示</a> &nbsp;|
+	<a href="http://www.bimcc.com/" target="_blank">飞椽零代码</a>&nbsp;|
+    <a href="https://gantt.bimcc.net/" target="_blank">说明文档</a>&nbsp;|
+    <a href="https://gantt.bimcc.net/" target="_blank">更新日志</a>
 </p>
 
 
