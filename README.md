@@ -13,8 +13,8 @@
 	<a target="_blank" href="https://react.zcopy.site/">
 		<img src="https://img.shields.io/badge/React%2BTS-v18%20v4.5-blue.svg" />
 	</a>
-	<a target="_blank" href="https://gitee.com/mingSoft/MCMS/stargazers">
-		<img src="https://gitee.com/qiwen-cloud/qiwen-file/badge/star.svg?theme=dark" alt='gitee star'/>
+    <a target="_blank" href="https://react.zcopy.site/">
+		<img src="https://img.shields.io/badge/rating-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85-brightgreen" />
 	</a>
 </p>
 <p align="center">
