@@ -84,10 +84,12 @@
 
 ### 案例截图
 
-
 <p align="center">
     <a href="https://gantt.bimcc.net/">
         <img width="100%" src="./gantt-7.png" >
+    </a>
+     <a href="https://gantt.bimcc.net/">
+        <img width="100%" src="./gantt-8.png" >
     </a>
     <a href="https://gantt.bimcc.net/">
         <img width="100%" src="./gantt-6.png" >
@@ -108,3 +110,4 @@
         <img width="100%" src="./gantt-4.png" >
     </a>
 </p>
+
