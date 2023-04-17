@@ -1,10 +1,10 @@
 <p align="center">
 	<a href="http://www.bimcc.com/">
-        <img width="30%" src="https://openim-1309784708.cos.ap-shanghai.myqcloud.com/54e7a8602d610ac0afa50136bafbe61a.png" >
+        <img width="30%" src="./feichuan.png" >
     </a>
 </p>
 <p align="center">
-	<strong style="font-size: 24px">飞椽4合一网络图引擎（更懂工程人的进度引擎）-- Gantt图+时标网络图+双代号（箭线图）+单代号（前导图），更直观便捷的让您随时随地掌控项目进度</strong>
+	<strong style="font-size: 24px">飞椽4合一网络图引擎（更懂工程人的进度引擎）-- Gantt图+时标网络图+双代号（箭线图）+单代号（前导图），更直观便捷的让您随时随地掌控项目进度，给您不一样的进度管理体验</strong>
 </p>
 <p align="center">
 	<a target="_blank" href="https://baike.baidu.com/item/MIT%E8%AE%B8%E5%8F%AF%E8%AF%81/6671281?fr=aladdin">
@@ -25,10 +25,12 @@
     <a href="https://github.com/zw12579/gantt-planing-react" target="_blank">Github仓库</a>
 </p>
 
+
 ### 功能速览
 
 
-- - [x] 无限级任务树，支持大数据量虚拟滚动优化
+- - [x] 任务自定义告警等级颜色
+- - [x] 无限级任务树，支持大量数据虚拟滚动加载优化
 
 - - [x] 自定义网络图样式（一键换肤、内置多套皮肤）
 
@@ -62,13 +64,13 @@
 
 - - [x] 检查点进度前锋线
 
-- - [x] 关键路径自动计算（甘特图、时标、单双代号），关键路径特殊标识
+- - [x] 关键路径自动计算（甘特图、时标、单双代号），关键路径特殊颜色标识
 
 - - [x] 任务进度S曲线
 
-- - [x] 人材机资源分配及消息提醒
+- - [x] 人、机、资源分配及消息提醒
 
-- - [x] 甘特图、时标网络图、单代号前导图、双代号箭线图
+- - [x] 甘特图、时标网络图、单代号（前导图）、双代号（箭线图）
 
 - - [x] 4合一引擎，数据互通无缝切换
 
@@ -77,10 +79,10 @@
 
 ### 特别说明
 
-- 开源不易，如蒙青睐，希望您动动发财的小手点点Star，以上功能源码正逐步开放中，后续全功能版本代码开源，谢谢大家
-- 4合一网络图引擎作者联系方式：QQ: 1257956488 
+- 开源不易，如蒙青睐，希望您动动发财的小手点点Star，以上功能源码正逐步开放中，谢谢大家
+- 4合一网络图引擎交流联系方式：QQ: 1257956488 
 - 飞椽零代码平台请访问 www.bimcc.com   ©重庆市筑云科技有限责任公司  **023-68682379**
-- 提供案例代码及API文档，后续支持React与Vue 插件安装（NPM包）引入
+- 提供案例代码及API文档，后续支持React与Vue 插件引入（NPM包）
 
 ### 案例截图
 
@@ -88,11 +90,11 @@
     <a href="https://gantt.bimcc.net/">
         <img width="100%" src="./gantt-7.png" >
     </a>
-     <a href="https://gantt.bimcc.net/">
-        <img width="100%" src="./gantt-8.png" >
-    </a>
     <a href="https://gantt.bimcc.net/">
         <img width="100%" src="./gantt-6.png" >
+    </a>
+    <a href="https://gantt.bimcc.net/">
+        <img width="100%" src="./gantt-8.png" >
     </a>
     <a href="https://gantt.bimcc.net/">
         <img width="100%" src="./gantt-5.png" >
