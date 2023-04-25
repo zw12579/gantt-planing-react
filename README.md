@@ -1,10 +1,10 @@
 <p align="center">
 	<a href="http://www.bimcc.com/">
-        <img width="30%" src="./feichuan.png" >
+        <img width="30%" src="./images/feichuan.png" >
     </a>
 </p>
 <p align="center">
-	<strong style="font-size: 24px">飞椽4合一网络图引擎（更懂工程人的进度引擎）-- Gantt图+时标网络图+双代号（箭线图）+单代号（前导图），更直观便捷的让您随时随地掌控项目进度，给您不一样的进度管理体验</strong>
+	<strong style="font-size: 24px">飞椽4合一网络图引擎（更懂工程人的进度引擎）-- Gantt图+时标网络图+双代号（箭线图）+PERT图（单代号前导图），更直观便捷的让您随时随地掌控项目进度，给您不一样的进度管理体验</strong>
 </p>
 <p align="center">
 	<a target="_blank" href="https://baike.baidu.com/item/MIT%E8%AE%B8%E5%8F%AF%E8%AF%81/6671281?fr=aladdin">
@@ -26,10 +26,16 @@
 </p>
 
 
+
 ### 功能速览
 
 
+- - [x] 完美兼容Project数据标准，支持project数据导入导出、PNG、PDF导出
+
+- - [x] 任意自主设计网络图、节点拖动、箭线调整等、一键逆向生成Gantt图、时标网络图、双代号、PERT图
+
 - - [x] 任务自定义告警等级颜色以及告警规则
+
 - - [x] 无限级任务树，支持大量数据虚拟滚动加载优化
 
 - - [x] 自定义网络图样式（一键换肤、内置多套皮肤）
@@ -70,7 +76,7 @@
 
 - - [x] 人、机、资源分配及消息提醒
 
-- - [x] 甘特图、时标网络图、单代号（前导图）、双代号（箭线图）
+- - [x] 甘特图、时标网络图、单代号（前导图、PERT图、七格图）、双代号（箭线图）
 
 - - [x] 4合一引擎，数据互通无缝切换
 
@@ -88,27 +94,30 @@
 
 <p align="center">
     <a href="https://gantt.bimcc.net/">
-        <img width="100%" src="./gantt-7.png" >
+        <img width="100%" src="./images/gantt-7.png" >
     </a>
     <a href="https://gantt.bimcc.net/">
-        <img width="100%" src="./gantt-6.png" >
+        <img width="100%" src="./images/gantt-6.png" >
     </a>
     <a href="https://gantt.bimcc.net/">
-        <img width="100%" src="./gantt-8.png" >
+        <img width="100%" src="./images/gantt-8.png" >
     </a>
     <a href="https://gantt.bimcc.net/">
-        <img width="100%" src="./gantt-5.png" >
+        <img width="100%" src="./images/pert-1.png" >
+    </a>
+    <a href="https://gantt.bimcc.net/">
+        <img width="100%" src="./images/gantt-5.png" >
     </a>
 	<a href="https://gantt.bimcc.net/">
-        <img width="100%" src="./gantt-1.png" >
+        <img width="100%" src="./images/gantt-1.png" >
     </a>
     <a href="https://gantt.bimcc.net/">
-        <img width="100%" src="./gantt-2.png" >
+        <img width="100%" src="./images/gantt-2.png" >
     </a>
     <a href="https://gantt.bimcc.net/">
-        <img width="100%" src="./gantt-3.png" >
+        <img width="100%" src="./images/gantt-3.png" >
     </a>
     <a href="https://gantt.bimcc.net/">
-        <img width="100%" src="./gantt-4.png" >
+        <img width="100%" src="./images/gantt-4.png" >
     </a>
 </p>
