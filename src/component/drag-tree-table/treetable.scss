@@ -1,0 +1,48 @@
+.drag-tree-table{
+  position: relative;
+  color: #606266;
+  font-size: 12px;
+  &.border{
+    border: 1px solid #eee;
+    border-right: none;
+  }
+}
+.drag-line{
+  position:absolute;
+  top: 0;
+  left: -1000px;
+  height: 100%;
+  width: 1px;
+  background: #ccc;
+}
+.drag-tree-table-header{
+  display: flex;
+  // padding: 15px 10px;
+  background: #f5f7fa;
+  height: 66px;
+  line-height: 36px;
+  box-sizing: border-box;
+  font-weight: 600;
+  .align-left{
+    text-align: left;
+  }
+  .align-right{
+    text-align: right;
+  }
+  .align-center{
+    text-align: center;
+  }
+  .tree-column{
+    user-select: none;
+  }
+}
+.tree-icon-hidden{
+  visibility: hidden;
+}
+/*.is-draging .tree-row:hover{
+  background: transparent !important;
+}*/
+//.tree-row{
+//  background-color: rgba(64,158,255,0);
+//  transition: background-color 0.5s linear;
+//}

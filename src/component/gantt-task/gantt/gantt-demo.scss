@@ -1,0 +1,116 @@
+.gantt-demo {
+  width: 100%;
+  height: 100%;
+}
+
+.turn-big-btn {
+  position: absolute;
+  top: 5px;
+  right: 256px;
+  cursor: pointer;
+  background-color: #337eff;
+  border: 2px solid #337eff;
+  border-radius: 3px;
+  color: #FFFFFF;
+}
+
+.turn-demo-btn {
+  position: absolute;
+  top: 5px;
+  right: 120px;
+  cursor: pointer;
+  background-color: #337eff;
+  border: 2px solid #337eff;
+  border-radius: 3px;
+  color: #FFFFFF;
+}
+
+.gantt-time {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  height: 31px;
+  justify-content: center;
+  padding-right: 2px;
+  position: absolute;
+  right: 0;
+  top: 1px;
+  z-index: 9999;
+
+  .gantt-btn {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, .08);
+    border-radius: 4px;
+    color: rgba(0, 0, 0, .65);
+    cursor: pointer;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 10px;
+    text-align: center;
+    width: 40px;
+  }
+
+  .gantt-change {
+    align-items: center;
+    background-color: rgba(0, 0, 0, .08);
+    border-radius: 4px;
+    display: flex;
+    height: 24px;
+    z-index: 9999;
+    margin-right: 15px;
+    padding-right: 1px;
+
+    .gantt-time-active {
+      background-color: #337eff;
+      color: #FFFFFF !important;
+    }
+
+    .gantt-change-item {
+      border-radius: 3px;
+      color: rgba(0, 0, 0, .85);
+      cursor: pointer;
+      display: inline-block;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      height: 22px;
+      line-height: 22px;
+      margin-left: 1px;
+      text-align: center;
+      width: 68px;
+    }
+  }
+
+  .gantt-zoom {
+    align-items: center;
+    background-color: rgba(0, 0, 0, .08);
+    border-radius: 4px;
+    display: flex;
+    height: 24px;
+    z-index: 9999;
+    width: 101px;
+
+    .gantt-time-active {
+      background: #ffffff;
+    }
+
+    .gantt-time-item {
+      border-radius: 3px;
+      color: rgba(0, 0, 0, .85);
+      cursor: pointer;
+      display: inline-block;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      height: 22px;
+      line-height: 22px;
+      margin-left: 1px;
+      text-align: center;
+      width: 32px;
+    }
+  }
+}

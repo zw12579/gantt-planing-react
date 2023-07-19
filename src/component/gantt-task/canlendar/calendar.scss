@@ -1,0 +1,62 @@
+.header {
+  user-select: none;
+
+  .header-top {
+    display: flex;
+    justify-content: flex-start;
+
+    .month-item {
+      text-align: left;
+      text-indent: 10px;
+      flex-shrink: 0;
+      line-height: 32px;
+      font-size: 1em;
+      border-left: 1px solid #D9D9D9;
+      overflow: hidden;
+      white-space: nowrap; /* 不换行 */
+      text-overflow: ellipsis;
+      border-bottom: 1px solid #D9D9D9;
+
+      &:first-child{
+        border-left: none;
+      }
+    }
+  }
+
+  .header-bottom {
+    display: flex;
+
+    .day-item {
+      flex-shrink: 0;
+      width: 36px;
+      border-left: 1px solid #D9D9D9;
+      color: rgba(0, 0, 0, 0.45);
+      line-height: 24px;
+      &:first-child{
+        border-left: none;
+      }
+    }
+
+    .week-item {
+      flex-shrink: 0;
+      width: 144px;
+      border-left: 1px solid #D9D9D9;
+      color: rgba(0, 0, 0, 0.45);
+      line-height: 24px;
+      &:first-child{
+        border-left: none;
+      }
+    }
+
+    .month-item {
+      flex-shrink: 0;
+      width: 260px;
+      border-left: 1px solid #D9D9D9;
+      color: rgba(0, 0, 0, 0.45);
+      line-height: 24px;
+      &:first-child{
+        border-left: none;
+      }
+    }
+  }
+}

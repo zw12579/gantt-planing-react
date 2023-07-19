@@ -1,0 +1,142 @@
+class Activity {
+  constructor(id, duration, dependencies) {
+    this.id = id;
+    this.duration = duration;
+    this.dependencies = dependencies;
+    this.earliestStart = 0;
+    this.latestStart = Infinity;
+  }
+}
+
+function forwardPass(activities) {
+  let maxDuration = 0;
+
+  activities.forEach(activity => {
+    activity.earliestStart = Math.max(...activity.dependencies.map(dep => activities.find(a => a.id === dep).earliestStart + activities.find(a => a.id === dep).duration), 0);
+    maxDuration = Math.max(maxDuration, activity.earliestStart + activity.duration);
+  });
+
+  return maxDuration;
+}
+
+function backwardPass(activities, maxDuration) {
+  activities.forEach(activity => {
+    activity.latestStart = Math.min(...activity.dependencies.map(dep => activities.find(a => a.id === dep).latestStart - activity.duration), maxDuration - activity.duration);
+  });
+}
+
+function findCriticalPath(activities) {
+  const criticalPath = activities.filter(activity => activity.earliestStart === activity.latestStart);
+  return criticalPath.map(activity => activity.id);
+}
+
+// Example usage:
+const activities = [
+  new Activity('A', 5, []),
+  new Activity('B', 3, ['A']),
+  new Activity('C', 2, ['A']),
+  new Activity('D', 4, ['B', 'C']),
+  new Activity('E', 6, ['D'])
+];
+
+const maxDuration = forwardPass(activities);
+backwardPass(activities, maxDuration);
+const criticalPath = findCriticalPath(activities);
+
+console.log('Critical Path:', criticalPath);
+
+
+// 定义一个双代号网络图
+const graph = {
+  A: ['B', 'C'],
+  B: ['D', 'E'],
+  C: ['F'],
+  D: [],
+  E: ['F'],
+  F: []
+};
+
+// 定义一个空对象用于存储节点
+const nodeNumber = {};
+
+// 定义一个计数器，用于生成唯一的节点编号
+let count = 1;
+
+// 定义一个深度优先搜索函数
+function dfs(node) {
+  // 如果该节点已经被访问过，则直接返回
+  if (nodeNumber[node]) {
+    return;
+  }
+  
+  // 为该节点分配一个唯一的编号
+  nodeNumber[node] = count++;
+  
+  // 遍历该节点的所有邻居节点
+  for (let neighbor of graph[node]) {
+    dfs(neighbor);
+  }
+}
+
+//从任意一个节点开始遍历
+dfs('A');
+
+// 输出每个节点的编号
+for (let node in nodeNumber) {
+  console.log(`${node}: ${nodeNumber[node]}`);
+}
+
+
+// 定义一个双代号网络图
+const graph = {
+  A: ['B', 'C'],
+  B: ['D', 'E'],
+  C: ['F'],
+  D: [],
+  E: ['F'],
+  F: []
+};
+
+// 定义一个空数组用于存节点坐标
+const nodePosition = {};
+
+// 定义节点之间的相互作用力
+const k = 0.1; // 弹簧劲度系数
+const c = 0.1; // 斥力系数
+
+// 定义一个力导向布局函数
+function forceDirectedLayout() {
+  // 初始化节点坐标
+  for (let node in graph) {
+    nodePosition[node] = { x: Math.random(), y: Math.random() };
+  }
+  
+  // 模拟节点之间的相互作用力
+  for (let i = 0; < 100; i++) {
+    for (let node1 in graph) {
+      for (let node2 of graph[node1]) {
+        // 计算节点之间的距离
+        const dx = nodePosition[node2].x - nodePosition[node1].x;
+        const dy = nodePosition[node2].y - nodePosition[node1].y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        // 计算节点之间的相互作用力
+        const force = k * distance - c / distance;
+        
+        // 更新节点坐标
+        nodePosition[node1].x += force * dx / distance;
+        nodePosition[node1].y += force * dy / distance;
+        nodePosition[node2].x -= force * dx / distance;
+        nodePosition[node2].y -= force * dy / distance;
+      }
+    }
+  }
+}
+
+// 运行力导向布局函数
+forceDirectedLayout();
+
+// 输出每个节点的坐标
+for (let node in nodePosition) {
+  console.log(`${node}: (${nodePosition[node].x}, ${nodePosition[node].y})`);
+}
