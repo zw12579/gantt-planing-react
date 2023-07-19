@@ -98,10 +98,10 @@
 
 <p align="center">
     <a href="https://gantt.bimcc.net/">
-        <img width="100%" src="./images/gantt-13.png" >
+        <img width="100%" src="./images/gantt-3.png" >
     </a>
     <a href="https://gantt.bimcc.net/">
-        <img width="100%" src="./images/gantt-12.png" >
+        <img width="100%" src="./images/gantt-2.png" >
     </a>
     <a href="https://gantt.bimcc.net/">
         <img width="100%" src="./images/gantt-7.png" >
