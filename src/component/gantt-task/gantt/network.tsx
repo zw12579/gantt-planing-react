@@ -6,6 +6,7 @@ import {DateSetup} from "../../../types/date-setup";
 import {ganttDateRange, seedDates} from "../../gantt-task/helpers/date-helper";
 import {Column} from "../../drag-tree-table/column";
 import NetworkGantt from "./network-gantt";
+import folderImg from '../../../assets/images/folder.png';
 
 export const Network: React.FunctionComponent<GanttProps> = (
   {
@@ -22,7 +23,8 @@ export const Network: React.FunctionComponent<GanttProps> = (
   const [columnHeader, setColumnHeader] = useState(columnData)
   const rowHeight = 56;
   const isdraggable = true;
-  const [tasks, setTasks] = React.useState<Task[]>(taskData); // 原始数据
+  const [folder, setFolder] = useState(false);
+  const [tasks, setTasks] = useState<Task[]>(taskData); // 原始数据
   const [dateSetup, setDateSetup] = useState<DateSetup>(() => {
     const [startDate, endDate] = ganttDateRange(tasks, scaleMode, preStepsCount);
     return {scaleMode, dates: seedDates(startDate, endDate, scaleMode)};
@@ -95,7 +97,10 @@ export const Network: React.FunctionComponent<GanttProps> = (
       networkPdmRef.current.scrollTo(ganttFooterRef.current.scrollLeft)
     }
   }
-
+  const showHideTasks = () => {
+    setFolder(!folder)
+    networkGantRef.current.hideTaskPanel()
+  }
   const columns = columnHeader.map((item, index) => {
     return (
       <Column key={index} column={item} isHeader={true} onResizeX={onResizeX} />
@@ -111,7 +116,15 @@ export const Network: React.FunctionComponent<GanttProps> = (
               {columns}
             </div>
           </div>
-          <div className={'header-m'}></div>
+          <div className={'header-m'}>
+            <div className={'folder'} onClick={showHideTasks}>
+              {
+                folder
+                  ? <img className={'folder-open'} src={folderImg} alt=""/>
+                  : <img className={'folder-mirror'} src={folderImg} alt=""/>
+              }
+            </div>
+          </div>
           <div className={'header-r'} ref={calendarRef}>
             <Calendar {...calendarProps} />
           </div>

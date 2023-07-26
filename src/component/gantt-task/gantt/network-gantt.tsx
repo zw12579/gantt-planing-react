@@ -52,6 +52,7 @@ interface State {
   copyTaskId: number,
   targetId: string | null | undefined,
   whereInsert: string
+  folder: boolean
 }
 
 const customField = {
@@ -97,6 +98,7 @@ class NetworkGantt extends React.Component<Props, State> {
       activeTaskId: 0,
       cutTaskId: 0,
       copyTaskId: 0,
+      folder: false,
     };
     this.ganttBodyRef = React.createRef();
     this.ganttLeftRef = React.createRef();
@@ -113,6 +115,7 @@ class NetworkGantt extends React.Component<Props, State> {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.mouseMoveSplit = this.mouseMoveSplit.bind(this);
     this.mouseMoveFlag = this.mouseMoveFlag.bind(this);
+    this.hideTaskPanel = this.hideTaskPanel.bind(this);
     store.subscribe(()=>{
       const enterData = store.getState().networkGantt
       this.onEnterData(enterData.taskModel)
@@ -555,6 +558,11 @@ class NetworkGantt extends React.Component<Props, State> {
       })
     }
   }
+  hideTaskPanel() {
+    this.setState({
+      folder: !this.state.folder
+    })
+  }
   setTreeStatus(children: Task[], status: boolean) {
     const travel = (list: Task[]) => {
       list.forEach((child) => {
@@ -710,6 +718,7 @@ class NetworkGantt extends React.Component<Props, State> {
         <div className={'gantt-body-wrap'} style={{transform: `translateY(${this.state.startOffset}px)`}}>
           <div
             className={'gantt-body-task'}
+            style={{display: this.state.folder ? 'none': 'block'}}
             ref={this.ganttLeftRef}
             onScroll={this.handleLeftScroll}
             onDragOver={this.drag}

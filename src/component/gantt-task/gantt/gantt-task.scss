@@ -36,6 +36,22 @@
       .header-m {
         border-right: 1px solid #D9D9D9;
         cursor: col-resize;
+        .folder {
+          position: absolute;
+          top: 60px;
+          left: 3px;
+          z-index: 10;
+          cursor: pointer;
+          .folder-open {
+            width: 32px;
+            height: 32px;
+            transform: rotate(180deg);
+          }
+          .folder-mirror {
+            width: 32px;
+            height: 32px;
+          }
+        }
       }
 
       .header-r {
